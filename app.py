@@ -91,7 +91,17 @@ def main():
                 #st.warning("News is categorizes as :: {}".format(result))
             else:
                 prediction = model_rfc.predict(features_train)
-                st.write(prediction)
+                if prediction == 1:
+                    st.warning("News is categorizes as :: {}".format('entertainment'))
+                elif prediction == 2:
+                    st.warning("News is categorizes as :: {}".format('politics'))
+                elif prediction == 3:
+                    st.warning("News is categorizes as :: {}".format('sport'))
+                elif prediction == 4:
+                    st.warning("News is categorizes as :: {}".format('tech'))
+                elif prediction == 5:
+                    st.warning("News is categorizes as :: {}".format('health'))
+                #st.write(prediction)
                 
                 #result1 = get_key(prediction,prediction_labels)
                 #st.warning("News is categorizes as :: {}".format(result1))
